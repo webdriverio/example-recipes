@@ -1,4 +1,4 @@
-# WebdriverIO Click Examples
+# WebdriverIO `click` Examples
 
 This example directory contains test files that demonstrate WebdriverIO's [`click`](https://webdriver.io/docs/api/element/click) command.
 
