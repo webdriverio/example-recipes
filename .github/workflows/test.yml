@@ -1,0 +1,26 @@
+name: Test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        exampleDir:
+          - click
+          - timezone
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with:
+            node-version: 18
+        - name: Install
+          run: npm install
+        - name: Test
+          run: npm run ${{ matrix.exampleDir }}
+          working-directory: ${{ matrix.exampleDir }}
+        - uses: actions/upload-artifact@v1
+          if: failure()
+          with:
+            name: logs
+            path: ${{ matrix.exampleDir }}/logs
