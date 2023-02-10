@@ -3,7 +3,10 @@ import { remote } from 'webdriverio'
 
 const browser = await remote({
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: process.env.CI ? ['headless', 'disable-gpu'] : []
+        }
     }
 })
 
