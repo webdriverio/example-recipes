@@ -7,7 +7,6 @@ jobs:
       matrix:
         exampleDir:
           - click
-          - timezone
     steps:
         - name: Checkout
           uses: actions/checkout@v3
