@@ -15,7 +15,10 @@ jobs:
           with:
             node-version: 18
         - name: Install
-          run: npm install
+          run: |
+            npm install
+            rm -r ./node_modules/chromedriver
+            npm i chromedriver@109
         - name: Test
           run: npm run ${{ matrix.exampleDir }}
           working-directory: ${{ matrix.exampleDir }}
