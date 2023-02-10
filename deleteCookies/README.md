@@ -1,6 +1,6 @@
 # WebdriverIO `deleteCookies` Examples
 
-This example directory contains test files that demonstrate WebdriverIO's [`deleteCookies`](https://webdriver.io/docs/api/element/deleteCookies) command.
+This example directory contains test files that demonstrate WebdriverIO's [`deleteCookies`](https://webdriver.io/docs/api/browser/deleteCookies) command.
 
 ## Prerequisite
 
@@ -16,12 +16,12 @@ npm install
 In this example, we start setting 3 cookies and attempt to delete one:
 
 ```sh
-npm run click -- --mochaOpts.grep 'should delete one cookie'
+npm run deleteCookies -- --mochaOpts.grep 'should delete one cookie'
 ```
 
 ### Delete All Cookies
 In this example, we then delete all (the remaining 2) cookies.
 
 ```sh
-npm run click -- --mochaOpts.grep 'should delete all cookies'
+npm run deleteCookies -- --mochaOpts.grep 'should delete all cookies'
 ```

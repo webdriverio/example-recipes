@@ -8,6 +8,7 @@ jobs:
         exampleDir:
           - click
           - deleteCookies
+          - overwriteCommand
     steps:
         - name: Checkout
           uses: actions/checkout@v3
