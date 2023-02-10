@@ -30,7 +30,7 @@ describe('deleteCookies', () => {
 
     it('should delete all cookies', async () => {
         await browser.deleteCookies()
-        cookies = await browser.getCookies()
+        const cookies = await browser.getCookies()
         expect(cookies).toMatchObject([])
     })
 })
