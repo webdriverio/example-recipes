@@ -15,6 +15,8 @@ const page = (await pptr.pages())[0]
 await page.emulateTimezone('Africa/Douala')
 
 await browser.url('https://webbrowsertools.com/timezone/')
+await browser.pause(2000)
+console.log(await browser.getPageSource());
 assert.equal(
     await browser.$('#timeZone').getText(),
     'Africa/Douala'
