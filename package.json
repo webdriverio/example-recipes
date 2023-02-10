@@ -1,11 +1,11 @@
 {
   "name": "webdriverio-example-recipes",
   "version": "0.0.1",
+  "author": "Christian Bromann <christian@saucelabs.com>",
   "description": "A set of common automation recipes using WebdriverIO",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "homepage": "https://github.com/webdriverio/webdriverio-example-recipes#readme",
+  "license": "MIT",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/webdriverio/webdriverio-example-recipes.git"
@@ -17,13 +17,21 @@
     "test",
     "automation"
   ],
-  "author": "Christian Bromann <christian@saucelabs.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/webdriverio/webdriverio-example-recipes/issues"
   },
-  "homepage": "https://github.com/webdriverio/webdriverio-example-recipes#readme",
+  "scripts": {
+    "click": "EXAMPLE_RECIPE=click wdio run ./wdio.conf.js --spec ./click/example.js",
+    "timezone": "node ./timezone/custom-timezones.js"
+  },
   "devDependencies": {
-    "webdriverio": "^7.3.0"
+    "@wdio/cli": "^8.3.5",
+    "@wdio/local-runner": "^8.3.5",
+    "@wdio/mocha-framework": "^8.3.0",
+    "@wdio/spec-reporter": "^8.3.0",
+    "@wdio/static-server-service": "^8.3.0",
+    "chromedriver": "^110.0.0",
+    "wdio-chromedriver-service": "^8.0.1",
+    "webdriverio": "^8.3.5"
   }
 }
