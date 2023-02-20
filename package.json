@@ -27,7 +27,7 @@
     "timezone": "node ./timezone/custom-timezones.js"
   },
   "devDependencies": {
-    "@wdio/cli": "^8.3.5",
+    "@wdio/cli": "^8.3.10",
     "@wdio/local-runner": "^8.3.5",
     "@wdio/mocha-framework": "^8.3.0",
     "@wdio/spec-reporter": "^8.3.0",
