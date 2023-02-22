@@ -4,6 +4,14 @@ The examples demonstrate how to use individual WebDriver protocol commands. You 
 
 __Note:__ these are raw protocol commands and might feel a bit rough to use, check out the WebdriverIO [`browser`](https://webdriver.io/docs/api/browser) and [`element`](https://webdriver.io/docs/api/element) API for more convinient methods.
 
+## Prerequisite
+
+Make sure to run this first, to set up the example repository:
+
+```sh
+npm install
+```
+
 ## Commands
 
 ### `status`
