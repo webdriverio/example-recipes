@@ -294,10 +294,10 @@ npm run webdriver -- --mochaOpts.grep "deleteAllCookies"
 npm run webdriver -- --mochaOpts.grep "getNamedCookie"
 ```
 
-### `getNamedCookie`
+### `deleteCookie`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getNamedCookie"
+npm run webdriver -- --mochaOpts.grep "deleteCookie"
 ```
 
 ### `dismissAlert`

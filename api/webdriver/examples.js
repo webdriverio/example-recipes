@@ -503,7 +503,7 @@ describe('WebDriver API', () => {
          */
     })
 
-    it('getNamedCookie', async () => {
+    it('deleteCookie', async () => {
         await browser.navigateTo('https://webdriver.io')
         console.log((await browser.getAllCookies()).length) // returns e.g. `3`
         await browser.addCookie({ name: 'foo', value: 'bar' })
