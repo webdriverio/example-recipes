@@ -10,6 +10,7 @@ jobs:
           - deleteCookies
           - overwriteCommand
           - selectors
+          - webdriver
     steps:
         - name: Checkout
           uses: actions/checkout@v3

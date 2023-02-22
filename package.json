@@ -41,7 +41,8 @@
     "selectors:ariaRole": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'by role attribute'",
     "selectors:js": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'js function'",
     "selectors:deep": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'deep selector'",
-    "timezone": "node ./timezone/custom-timezones.js"
+    "timezone": "node ./timezone/custom-timezones.js",
+    "webdriver": "EXAMPLE_RECIPE=api wdio run ./wdio.conf.js --spec ./api/webdriver/*.js"
   },
   "devDependencies": {
     "@wdio/cli": "^8.3.10",
