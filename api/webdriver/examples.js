@@ -89,7 +89,7 @@ describe('WebDriver API', () => {
     it('getWindowHandle', async () => {
         console.log(await browser.getWindowHandle())
         /**
-         * returns e.g.: " CDwindow-2D68A4601C2DDE4F756AC374BB588712"
+         * returns e.g.: "CDwindow-2D68A4601C2DDE4F756AC374BB588712"
          */
     })
 
@@ -134,6 +134,13 @@ describe('WebDriver API', () => {
         await browser.createWindow('tab')
         console.log((await browser.getWindowHandles()).length) // returns `2`
         console.log(await browser.getUrl()) // returns "data:,"
+    })
+
+    it('getWindowHandles', async () => {
+        console.log(await browser.getWindowHandles())
+        /**
+         * returns e.g.: `["CDwindow-2D68A4601C2DDE4F756AC374BB588712"]`
+         */
     })
 
     /**
