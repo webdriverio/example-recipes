@@ -53,7 +53,7 @@ describe('WebDriver API', () => {
 
     it('back', async () => {
         await browser.navigateTo('https://webdriver.io')
-        await $('=API').click()
+        await $('=API Reference').click()
         await expect(browser).toHaveUrl('https://webdriver.io/docs/api')
         await browser.back()
         await expect(browser).toHaveUrl('https://webdriver.io/')
@@ -61,7 +61,7 @@ describe('WebDriver API', () => {
 
     it('forward', async () => {
         await browser.navigateTo('https://webdriver.io')
-        await $('=API').click()
+        await $('=API Reference').click()
         await expect(browser).toHaveUrl('https://webdriver.io/docs/api')
         await browser.back()
         await expect(browser).toHaveUrl('https://webdriver.io/')
