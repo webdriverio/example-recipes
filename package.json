@@ -24,6 +24,23 @@
     "click": "EXAMPLE_RECIPE=click wdio run ./wdio.conf.js --spec ./click/example.js",
     "deleteCookies": "EXAMPLE_RECIPE=deleteCookies wdio run ./wdio.conf.js --spec ./deleteCookies/example.js",
     "overwriteCommand": "EXAMPLE_RECIPE=overwriteCommand wdio run ./wdio.conf.js --spec ./overwriteCommand/example.js",
+    "selectors": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js",
+    "selectors:css": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'css selector'",
+    "selectors:linkText": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'link text'",
+    "selectors:partialLinkText": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'partial link text'",
+    "selectors:elementText": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'element text'",
+    "selectors:partialElementText": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'partial element text'",
+    "selectors:tagName": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'tag name'",
+    "selectors:nameAttribute": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'name attribute'",
+    "selectors:xpath": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'xpath'",
+    "selectors:ariaLabel": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'aria-label'",
+    "selectors:ariaLabelledBy": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'aria-labelledby'",
+    "selectors:ariaByContent": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'by content'",
+    "selectors:ariaByTitle": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'by title'",
+    "selectors:ariaByAlt": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'by alt property'",
+    "selectors:ariaRole": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'by role attribute'",
+    "selectors:js": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'js function'",
+    "selectors:deep": "EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'deep selector'",
     "timezone": "node ./timezone/custom-timezones.js"
   },
   "devDependencies": {
@@ -33,6 +50,7 @@
     "@wdio/spec-reporter": "^8.3.0",
     "@wdio/static-server-service": "^8.3.0",
     "chromedriver": "^110.0.0",
+    "npm-run-all": "^4.1.5",
     "wdio-chromedriver-service": "^8.1.1",
     "webdriverio": "^8.3.10"
   }
