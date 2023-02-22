@@ -117,6 +117,19 @@ describe('WebDriver API', () => {
          */
     })
 
+    it('switchToWindow', async () => {
+        await browser.navigateTo('https://webdriver.io')
+        await browser.newWindow('http://json.org')
+        console.log(await browser.getTitle()) // returns "JSON"
+        
+        const handles = await browser.getWindowHandles()
+        await browser.switchToWindow(handles[0])
+        console.log(await browser.getTitle())
+        /**
+         * returns: "WebdriverIO · Next-gen browser and mobile automation test framework for Node.js | WebdriverIO"
+         */
+    })
+
     it('createWindow', async () => {
         await browser.createWindow('tab')
         console.log((await browser.getWindowHandles()).length) // returns `2`

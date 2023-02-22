@@ -72,6 +72,12 @@ npm run webdriver -- --mochaOpts.grep "getWindowHandle"
 npm run webdriver -- --mochaOpts.grep "closeWindow"
 ```
 
+### `switchToWindow`
+
+```sh
+npm run webdriver -- --mochaOpts.grep "switchToWindow"
+```
+
 ### `createWindow`
 
 ```sh
