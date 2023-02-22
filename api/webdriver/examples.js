@@ -279,7 +279,7 @@ describe('WebDriver API', () => {
         await expect($(header)).toHaveText('NESTED ELEMENTS')
     })
 
-    it('findElementFromElement', async () => {
+    it('findElementsFromElement', async () => {
         await browser.navigateTo('http://guinea-pig.webdriver.io')
         const nested = await browser.findElement('css selector', '.nested')
         const spans = await browser.findElementsFromElement(

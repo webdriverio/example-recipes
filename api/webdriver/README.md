@@ -162,10 +162,10 @@ npm run webdriver -- --mochaOpts.grep "findElementsFromShadowRoot"
 npm run webdriver -- --mochaOpts.grep "findElementFromElement"
 ```
 
-### `findElementFromElement`
+### `findElementsFromElement`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "findElementFromElement"
+npm run webdriver -- --mochaOpts.grep "findElementsFromElement"
 ```
 
 ### `getElementShadowRoot`
