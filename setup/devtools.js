@@ -2,7 +2,12 @@ import assert from 'node:assert'
 import DevTools from 'devtools'
 
 const client = await DevTools.newSession({
-    capabilities: { browserName: 'chrome' }
+    capabilities: {
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: process.env.CI ? ['headless', 'disable-gpu'] : []
+        }
+    }
 })
 
 await client.navigateTo('https://www.google.com/ncr')

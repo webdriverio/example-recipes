@@ -2,7 +2,12 @@ import assert from 'node:assert'
 import { remote } from 'webdriverio'
 
 const browser = await remote({
-    capabilities: { browserName: 'chrome' }
+    capabilities: {
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: process.env.CI ? ['headless', 'disable-gpu'] : []
+        }
+    }
 })
 
 await browser.url('https://duckduckgo.com')

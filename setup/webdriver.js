@@ -5,7 +5,12 @@ Chromedriver.start(['--port=4444'])
 import WebDriver from 'webdriver'
 
 const client = await WebDriver.newSession({
-    capabilities: { browserName: 'chrome' }
+    capabilities: {
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: process.env.CI ? ['headless', 'disable-gpu'] : []
+        }
+    }
 })
 
 await client.navigateTo('https://www.google.com/ncr')
