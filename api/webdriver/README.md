@@ -17,305 +17,305 @@ npm install
 ### `status`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "status"
+npm run api/webdriver -- --mochaOpts.grep "status"
 ```
 
 ### `getTimeouts`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getTimeouts"
+npm run api/webdriver -- --mochaOpts.grep "getTimeouts"
 ```
 
 ### `setTimeouts`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "setTimeouts"
+npm run api/webdriver -- --mochaOpts.grep "setTimeouts"
 ```
 
 ### `getUrl`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getUrl"
+npm run api/webdriver -- --mochaOpts.grep "getUrl"
 ```
 
 ### `getUrl`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getUrl"
+npm run api/webdriver -- --mochaOpts.grep "getUrl"
 ```
 
 ### `back`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "back"
+npm run api/webdriver -- --mochaOpts.grep "back"
 ```
 
 ### `forward`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "forward"
+npm run api/webdriver -- --mochaOpts.grep "forward"
 ```
 
 ### `refresh`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "refresh"
+npm run api/webdriver -- --mochaOpts.grep "refresh"
 ```
 
 ### `getTitle`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getTitle"
+npm run api/webdriver -- --mochaOpts.grep "getTitle"
 ```
 
 ### `getWindowHandle`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getWindowHandle"
+npm run api/webdriver -- --mochaOpts.grep "getWindowHandle"
 ```
 
 ### `closeWindow`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "closeWindow"
+npm run api/webdriver -- --mochaOpts.grep "closeWindow"
 ```
 
 ### `switchToWindow`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "switchToWindow"
+npm run api/webdriver -- --mochaOpts.grep "switchToWindow"
 ```
 
 ### `createWindow`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "createWindow"
+npm run api/webdriver -- --mochaOpts.grep "createWindow"
 ```
 
 ### `getWindowHandles`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getWindowHandles"
+npm run api/webdriver -- --mochaOpts.grep "getWindowHandles"
 ```
 
 ### `switchToFrame`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "switchToFrame"
+npm run api/webdriver -- --mochaOpts.grep "switchToFrame"
 ```
 
 ### `switchToParentFrame`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "switchToParentFrame"
+npm run api/webdriver -- --mochaOpts.grep "switchToParentFrame"
 ```
 
 ### `getWindowRect`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getWindowRect"
+npm run api/webdriver -- --mochaOpts.grep "getWindowRect"
 ```
 
 ### `setWindowRect`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "setWindowRect"
+npm run api/webdriver -- --mochaOpts.grep "setWindowRect"
 ```
 
 ### `maximizeWindow`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "maximizeWindow"
+npm run api/webdriver -- --mochaOpts.grep "maximizeWindow"
 ```
 
 ### `minimizeWindow`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "minimizeWindow"
+npm run api/webdriver -- --mochaOpts.grep "minimizeWindow"
 ```
 
 ### `fullscreenWindow`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "fullscreenWindow"
+npm run api/webdriver -- --mochaOpts.grep "fullscreenWindow"
 ```
 
 ### `findElement`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "findElement"
+npm run api/webdriver -- --mochaOpts.grep "findElement"
 ```
 
 ### `findElementFromShadowRoot`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "findElementFromShadowRoot"
+npm run api/webdriver -- --mochaOpts.grep "findElementFromShadowRoot"
 ```
 
 ### `findElements`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "findElements"
+npm run api/webdriver -- --mochaOpts.grep "findElements"
 ```
 
 ### `findElementsFromShadowRoot`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "findElementsFromShadowRoot"
+npm run api/webdriver -- --mochaOpts.grep "findElementsFromShadowRoot"
 ```
 
 ### `findElementFromElement`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "findElementFromElement"
+npm run api/webdriver -- --mochaOpts.grep "findElementFromElement"
 ```
 
 ### `findElementsFromElement`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "findElementsFromElement"
+npm run api/webdriver -- --mochaOpts.grep "findElementsFromElement"
 ```
 
 ### `getElementShadowRoot`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getElementShadowRoot"
+npm run api/webdriver -- --mochaOpts.grep "getElementShadowRoot"
 ```
 
 ### `getActiveElement`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getActiveElement"
+npm run api/webdriver -- --mochaOpts.grep "getActiveElement"
 ```
 
 ### `isElementSelected`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "isElementSelected"
+npm run api/webdriver -- --mochaOpts.grep "isElementSelected"
 ```
 
 ### `isElementDisplayed`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "isElementDisplayed"
+npm run api/webdriver -- --mochaOpts.grep "isElementDisplayed"
 ```
 
 ### `getElementAttribute`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getElementAttribute"
+npm run api/webdriver -- --mochaOpts.grep "getElementAttribute"
 ```
 
 ### `getElementProperty`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getElementProperty"
+npm run api/webdriver -- --mochaOpts.grep "getElementProperty"
 ```
 
 ### `getElementCSSValue`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getElementCSSValue"
+npm run api/webdriver -- --mochaOpts.grep "getElementCSSValue"
 ```
 
 ### `getElementText`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getElementText"
+npm run api/webdriver -- --mochaOpts.grep "getElementText"
 ```
 
 ### `getElementTagName`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getElementTagName"
+npm run api/webdriver -- --mochaOpts.grep "getElementTagName"
 ```
 
 ### `getElementRect`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getElementRect"
+npm run api/webdriver -- --mochaOpts.grep "getElementRect"
 ```
 
 ### `isElementEnabled`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "isElementEnabled"
+npm run api/webdriver -- --mochaOpts.grep "isElementEnabled"
 ```
 
 ### `elementClick`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "elementClick"
+npm run api/webdriver -- --mochaOpts.grep "elementClick"
 ```
 
 ### `elementClear`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "elementClear"
+npm run api/webdriver -- --mochaOpts.grep "elementClear"
 ```
 
 ### `elementSendKeys`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "elementSendKeys"
+npm run api/webdriver -- --mochaOpts.grep "elementSendKeys"
 ```
 
 ### `getPageSource`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getPageSource"
+npm run api/webdriver -- --mochaOpts.grep "getPageSource"
 ```
 
 ### `executeScript`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "executeScript"
+npm run api/webdriver -- --mochaOpts.grep "executeScript"
 ```
 
 ### `executeAsyncScript`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "executeAsyncScript"
+npm run api/webdriver -- --mochaOpts.grep "executeAsyncScript"
 ```
 
 ### `getAllCookies`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getAllCookies"
+npm run api/webdriver -- --mochaOpts.grep "getAllCookies"
 ```
 
 ### `addCookie`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "addCookie"
+npm run api/webdriver -- --mochaOpts.grep "addCookie"
 ```
 
 ### `deleteAllCookies`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "deleteAllCookies"
+npm run api/webdriver -- --mochaOpts.grep "deleteAllCookies"
 ```
 
 ### `getNamedCookie`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getNamedCookie"
+npm run api/webdriver -- --mochaOpts.grep "getNamedCookie"
 ```
 
 ### `deleteCookie`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "deleteCookie"
+npm run api/webdriver -- --mochaOpts.grep "deleteCookie"
 ```
 
 ### `dismissAlert`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "dismissAlert"
+npm run api/webdriver -- --mochaOpts.grep "dismissAlert"
 ```
 
 ### `getAlertText`
 
 ```sh
-npm run webdriver -- --mochaOpts.grep "getAlertText"
+npm run api/webdriver -- --mochaOpts.grep "getAlertText"
 ```
