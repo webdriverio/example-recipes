@@ -21,6 +21,7 @@
     "url": "https://github.com/webdriverio/webdriverio-example-recipes/issues"
   },
   "scripts": {
+    "api/webdriver": "EXAMPLE_RECIPE=api wdio run ./wdio.conf.js --spec ./api/webdriver/*.js",
     "click": "EXAMPLE_RECIPE=click wdio run ./wdio.conf.js --spec ./click/example.js",
     "deleteCookies": "EXAMPLE_RECIPE=deleteCookies wdio run ./wdio.conf.js --spec ./deleteCookies/example.js",
     "overwriteCommand": "EXAMPLE_RECIPE=overwriteCommand wdio run ./wdio.conf.js --spec ./overwriteCommand/example.js",
@@ -46,8 +47,7 @@
     "setup:devtools": "node ./setup/devtools.js",
     "setup:standalone": "node ./setup/standalone.js",
     "setup:testrunner": "wdio run ./wdio.conf.js --spec ./setup/testrunner.js",
-    "timezone": "node ./timezone/custom-timezones.js",
-    "webdriver": "EXAMPLE_RECIPE=api wdio run ./wdio.conf.js --spec ./api/webdriver/*.js"
+    "timezone": "node ./timezone/custom-timezones.js"
   },
   "devDependencies": {
     "@wdio/cli": "^8.3.10",

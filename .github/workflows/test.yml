@@ -11,7 +11,7 @@ jobs:
           - overwriteCommand
           - selectors
           - setup
-          - webdriver
+          - api/webdriver
     steps:
         - name: Checkout
           uses: actions/checkout@v3
