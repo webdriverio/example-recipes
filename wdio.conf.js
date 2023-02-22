@@ -117,7 +117,7 @@ export const config = {
                 }]
             }]
             : undefined
-    ],
+    ].filter(Boolean),
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

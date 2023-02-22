@@ -10,6 +10,7 @@ jobs:
           - deleteCookies
           - overwriteCommand
           - selectors
+          - setup
           - webdriver
     steps:
         - name: Checkout
