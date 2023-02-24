@@ -10,7 +10,7 @@ jobs:
           - deleteCookies
           - overwriteCommand
           - selectors
-          - gettingStarted
+          - getting-started
           - setup
           - api/webdriver
     steps:
