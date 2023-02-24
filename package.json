@@ -51,7 +51,8 @@
     "setup:standalone": "node ./setup/standalone.js",
     "setup:testrunner": "wdio run ./wdio.conf.js --spec ./setup/testrunner.js",
     "timezone": "node ./timezone/custom-timezones.js",
-    "waitForDisplayed": "EXAMPLE_RECIPE=waitForDisplayed wdio run ./wdio.conf.js --spec ./waitForDisplayed/waitForDisplayedExample.js"
+    "waitForDisplayed": "EXAMPLE_RECIPE=waitForDisplayed wdio run ./wdio.conf.js --spec ./waitForDisplayed/waitForDisplayedExample.js",
+    "waitUntil": "EXAMPLE_RECIPE=waitUntil wdio run ./wdio.conf.js --spec ./waitUntil/waitUntilExample.js"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.3",

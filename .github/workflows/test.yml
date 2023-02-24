@@ -9,6 +9,7 @@ jobs:
           - click
           - deleteCookies
           - waitForDisplayed
+          - waitUntil
           - overwriteCommand
           - selectors
           - getting-started
