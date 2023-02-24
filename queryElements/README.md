@@ -1,6 +1,6 @@
-# `waitForDisplayed` Example
+# WebdriverIO Examples for querying elements
 
-This directory contains the example files for the [`waitForDisplayed`](https://webdriver.io/docs/api/element/waitForDisplayed) command.
+This directory contains example files for querying elements using [`$`](https://webdriver.io/docs/api/browser/$) and [`$$`](https://webdriver.io/docs/api/browser/$$) in WebdriverIO.
 
 ## Prerequisite
 
@@ -10,10 +10,16 @@ Make sure to run this first, to set up the example repository:
 npm install
 ```
 
-## Example
+## Examples
 
-Run example via:
+Fetching a single element:
 
 ```sh
-npm run waitForDisplayed
+npm run queryElements:single
+```
+
+Fetching multiple elements:
+
+```sh
+npm run queryElements:multiple
 ```

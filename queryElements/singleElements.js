@@ -1,4 +1,5 @@
 import { Key } from 'webdriverio'
+
 describe('waitForDisplayed Example', () => {
     beforeEach(async () => {
         await browser.url('/example.html')
