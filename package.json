@@ -23,7 +23,8 @@
   "scripts": {
     "api/webdriver": "EXAMPLE_RECIPE=api wdio run ./wdio.conf.js --spec ./api/webdriver/*.js",
     "click": "EXAMPLE_RECIPE=click wdio run ./wdio.conf.js --spec ./click/example.js",
-    "component-testing": "wdio run ./wdio.comp.conf.js --spec ./component-testing/example.js",
+    "component-testing": "run-s component-testing:*",
+    "component-testing:svelte": "wdio run ./wdio.comp.conf.js --spec ./component-testing/svelte-example.js",
     "deleteCookies": "EXAMPLE_RECIPE=deleteCookies wdio run ./wdio.conf.js --spec ./deleteCookies/example.js",
     "getting-started": "node ./getting-started/run-in-script.js",
     "overwriteCommand": "EXAMPLE_RECIPE=overwriteCommand wdio run ./wdio.conf.js --spec ./overwriteCommand/example.js",
