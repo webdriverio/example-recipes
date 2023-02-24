@@ -5,6 +5,8 @@ describe('waitForDisplayed Example', () => {
 
         const text = await $$('#menu')[0]
         console.log(await text.$$('li')[2].$('a').getText()) // outputs: "API"
+
+        await expect(text.$$('li')[2].$('a')).toHaveText('API')
     })
     
     it('should get text a menu link - JS Function', async () => {
@@ -20,6 +22,8 @@ describe('waitForDisplayed Example', () => {
             return this.document.querySelectorAll('#menu') // Element[]
         })[0]
         console.log(await text.$$('li')[2].$('a').getText()) // outputs: "API"
+
+        await expect(text.$$('li')[2].$('a')).toHaveText('API')
     })
     
     it('can create element array out of single elements', async () => {

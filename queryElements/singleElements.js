@@ -8,6 +8,8 @@ describe('waitForDisplayed Example', () => {
     it('should get text a menu link', async () => {
         const menu$ = await $('#menu') // or `browser.$('#menu')`
         console.log(await menu$.$$('li')[2].$('a').getText()) // outputs: "API"
+
+        await expect(menu$.$$('li')[2].$('a')).toHaveText('API')
     })
     
     it('should get text a menu link - JS Function', async () => {
@@ -21,6 +23,8 @@ describe('waitForDisplayed Example', () => {
             return this.document.querySelector('#menu') // Element
         })
         console.log(await menu$.$$('li')[2].$('a').getText()) // outputs: "API"
+
+        await expect(menu$.$$('li')[2].$('a')).toHaveText('API')
     })
     
     it('should allow to convert protocol result of an element into a WebdriverIO element', async () => {
