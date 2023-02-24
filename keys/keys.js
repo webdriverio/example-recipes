@@ -1,8 +1,8 @@
 import { Key } from 'webdriverio'
 
 it('should copy&paste from one input to another', async () => {
-    const $copyInput = await $('aria/copy')
-    const $pasteInput = await $('aria/paste')
+    const $copyInput = await $('#copy')
+    const $pasteInput = await $('#paste')
 
     await $copyInput.setValue('some text')
     await browser.keys([Key.Ctrl, 'a'])
