@@ -12,6 +12,7 @@ jobs:
           - selectors
           - getting-started
           - setup
+          - component-testing
           - api/webdriver
     steps:
         - name: Checkout

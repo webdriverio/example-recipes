@@ -23,6 +23,7 @@
   "scripts": {
     "api/webdriver": "EXAMPLE_RECIPE=api wdio run ./wdio.conf.js --spec ./api/webdriver/*.js",
     "click": "EXAMPLE_RECIPE=click wdio run ./wdio.conf.js --spec ./click/example.js",
+    "component-testing": "wdio run ./wdio.comp.conf.js --spec ./component-testing/example.js",
     "deleteCookies": "EXAMPLE_RECIPE=deleteCookies wdio run ./wdio.conf.js --spec ./deleteCookies/example.js",
     "getting-started": "node ./getting-started/run-in-script.js",
     "overwriteCommand": "EXAMPLE_RECIPE=overwriteCommand wdio run ./wdio.conf.js --spec ./overwriteCommand/example.js",
@@ -51,6 +52,10 @@
     "timezone": "node ./timezone/custom-timezones.js"
   },
   "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/svelte": "^3.2.2",
+    "@wdio/browser-runner": "^8.3.10",
     "@wdio/cli": "^8.3.10",
     "@wdio/local-runner": "^8.3.10",
     "@wdio/mocha-framework": "^8.3.0",
