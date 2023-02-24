@@ -10,6 +10,7 @@ jobs:
           - deleteCookies
           - waitForDisplayed
           - waitUntil
+          - keys
           - overwriteCommand
           - selectors
           - getting-started
