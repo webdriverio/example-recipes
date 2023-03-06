@@ -15,7 +15,7 @@ npm install
 Run example:
 
 ```sh
-npm run gettingStarted
+npm run getting-started
 ```
 
 View screenshot:
