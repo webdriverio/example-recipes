@@ -62,7 +62,7 @@
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/svelte": "^3.2.2",
-    "@wdio/browser-runner": "^8.5.6",
+    "@wdio/browser-runner": "^8.5.9",
     "@wdio/cli": "^8.5.9",
     "@wdio/local-runner": "^8.5.6",
     "@wdio/mocha-framework": "^8.5.6",
