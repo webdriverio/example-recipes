@@ -59,7 +59,7 @@
     "waitUntil": "EXAMPLE_RECIPE=waitUntil wdio run ./wdio.conf.js --spec ./waitUntil/waitUntilExample.js"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "@sveltejs/vite-plugin-svelte": "^2.0.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/svelte": "^3.2.2",
     "@wdio/browser-runner": "^8.6.9",
