@@ -63,7 +63,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/svelte": "^3.2.2",
     "@wdio/browser-runner": "^8.7.0",
-    "@wdio/cli": "^8.7.0",
+    "@wdio/cli": "^8.8.3",
     "@wdio/local-runner": "^8.7.0",
     "@wdio/mocha-framework": "^8.7.0",
     "@wdio/spec-reporter": "^8.7.0",
