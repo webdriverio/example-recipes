@@ -13,6 +13,7 @@ const client = await WebDriver.newSession({
     }
 })
 
+await client.setTimeouts(2000, 2000, 0)
 await client.navigateTo('https://www.google.com/ncr')
 
 const approveCookieBtns = await client.findElements('css selector', 'button div[role="none"]')
