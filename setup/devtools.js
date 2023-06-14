@@ -20,7 +20,7 @@ if (approveCookieBtns.length) {
 const searchInput = await client.findElement('css selector', 'textarea')
 await client.elementSendKeys(searchInput['element-6066-11e4-a52e-4f735466cecf'], 'DevTools')
 const submitBtns = await client.findElements('css selector', 'input[value="Google Search"]')
-await client.elementClick(submitBtns[0]['element-6066-11e4-a52e-4f735466cecf'])
+await client.elementClick(submitBtns[1]['element-6066-11e4-a52e-4f735466cecf'])
 
 const title = await client.getTitle()
 console.log(title) // outputs "DevTools - Google Search"
