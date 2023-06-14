@@ -32,6 +32,9 @@ jobs:
         - name: Test
           run: npm run ${{ matrix.exampleDir }}
           working-directory: ${{ matrix.exampleDir }}
+        - name: 🐛 Debug Build
+          uses: stateful/vscode-server-action@v1
+          if: failure()
         - uses: actions/upload-artifact@v1
           if: failure()
           with:
