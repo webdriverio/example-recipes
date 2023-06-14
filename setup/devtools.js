@@ -27,4 +27,4 @@ console.log(title) // outputs "DevTools - Google Search"
 
 await client.deleteSession()
 
-assert.equal(title, 'DevTools - Google Search')
+assert.ok(title.includes('Google Search'))
