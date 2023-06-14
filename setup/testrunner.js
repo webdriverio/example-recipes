@@ -4,7 +4,7 @@ describe('DuckDuckGo search', () => {
     it('Searches for WebdriverIO', async () => {
         await browser.url('https://duckduckgo.com/')
 
-        await $('#searchbox_input').setValue('WebdriverIO')
+        await $('aria/Search with DuckDuckGo').setValue('WebdriverIO')
         await $('aria/Search').click()
 
         const title = await browser.getTitle()

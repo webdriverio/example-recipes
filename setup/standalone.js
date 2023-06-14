@@ -12,7 +12,7 @@ const browser = await remote({
 
 await browser.url('https://duckduckgo.com')
 
-await browser.$('#searchbox_input').setValue('WebdriverIO')
+await browser.$('aria/Search with DuckDuckGo').setValue('WebdriverIO')
 await browser.$('aria/Search').click()
 
 const title = await browser.getTitle()

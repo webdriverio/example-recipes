@@ -15,7 +15,8 @@ jobs:
           - overwriteCommand
           - selectors
           - getting-started
-          - setup
+          - setup:webdriver
+          - setup:devtools
           - component-testing
           - api/webdriver
     steps:
