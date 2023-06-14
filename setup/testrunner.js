@@ -4,8 +4,11 @@ describe('DuckDuckGo search', () => {
     it('Searches for WebdriverIO', async () => {
         await browser.url('https://duckduckgo.com/')
 
-        await $('#search_form_input_homepage').setValue('WebdriverIO')
-        await $('#search_button_homepage').click()
+        const inputElem = await browser.$('aria/Search with DuckDuckGo')
+        await inputElem.setValue('WebdriverIO')
+
+        const submitBtn = await browser.$('aria/Search')
+        await submitBtn.click()
 
         const title = await browser.getTitle()
         expect(title).toBe('WebdriverIO at DuckDuckGo')

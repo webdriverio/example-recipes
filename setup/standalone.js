@@ -12,10 +12,10 @@ const browser = await remote({
 
 await browser.url('https://duckduckgo.com')
 
-const inputElem = await browser.$('#search_form_input_homepage')
+const inputElem = await browser.$('aria/Search with DuckDuckGo')
 await inputElem.setValue('WebdriverIO')
 
-const submitBtn = await browser.$('#search_button_homepage')
+const submitBtn = await browser.$('aria/Search')
 await submitBtn.click()
 
 const title = await browser.getTitle()
