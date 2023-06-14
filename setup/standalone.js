@@ -12,8 +12,8 @@ const browser = await remote({
 
 await browser.url('https://duckduckgo.com')
 
-await browser.$('aria/Search with DuckDuckGo').setValue('WebdriverIO')
-await browser.$('aria/Search').click()
+await browser.$('#search_form_input_homepage').setValue('WebdriverIO')
+await browser.$('#search_button_homepage').click()
 
 const title = await browser.getTitle()
 console.log(title) // outputs: "WebdriverIO at DuckDuckGo"
