@@ -17,7 +17,9 @@ await client.setTimeouts(2000, 2000, 0)
 await client.navigateTo('https://www.google.com/ncr')
 
 const approveCookieBtns = await client.findElements('css selector', 'button div[role="none"]')
-await client.elementClick(approveCookieBtns[approveCookieBtns.length - 1]['element-6066-11e4-a52e-4f735466cecf'])
+if (approveCookieBtns.length) {
+    await client.elementClick(approveCookieBtns[approveCookieBtns.length - 1]['element-6066-11e4-a52e-4f735466cecf'])
+}
 
 const searchInput = await client.findElement('css selector', 'textarea')
 await client.elementSendKeys(searchInput['element-6066-11e4-a52e-4f735466cecf'], 'WebDriver')
