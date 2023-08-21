@@ -5,14 +5,13 @@ const browser = await remote({
     capabilities: {
         browserName: 'chrome',
         'goog:chromeOptions': {
-            args: process.env.CI ? ['headless', 'disable-gpu'] : []
+            args: process.env.CI ? ['headless', 'disable-gpu', 'window-size=1200,800'] : []
         }
     }
 })
 
 await browser.url('https://webdriver.io')
-console.log(await browser.getPageSource())
-const apiLink = await browser.$('.navbar').$('a=API')
+const apiLink = await browser.$('=API')
 await apiLink.click()
 
 await browser.saveScreenshot('./screenshot.png')
