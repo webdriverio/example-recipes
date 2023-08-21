@@ -12,7 +12,7 @@ const browser = await remote({
 
 await browser.url('https://webdriver.io')
 console.log(await browser.getPageSource())
-const apiLink = await browser.$('a=API')
+const apiLink = await browser.$('.navbar').$('a=API')
 await apiLink.click()
 
 await browser.saveScreenshot('./screenshot.png')
