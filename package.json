@@ -69,7 +69,7 @@
     "@wdio/spec-reporter": "^8.15.0",
     "@wdio/static-server-service": "^8.15.0",
     "chromedriver": "*",
-    "devtools": "^8.15.4",
+    "devtools": "^8.15.9",
     "npm-run-all": "^4.1.5",
     "wdio-chromedriver-service": "^8.1.1",
     "webdriverio": "^8.15.4"
