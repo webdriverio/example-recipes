@@ -32,26 +32,38 @@ describe('selectors', () => {
     it('element text', async () => {
         await browser.url('/example.html')
 
-        const header = await $('h1=Welcome to my Page')
+        let header = await $('h1=Welcome to my Page')
+        await expect(header).toHaveText('Welcome to my Page')
+        header = await $('h1.=WeLcOme tO My PAge')
         await expect(header).toHaveText('Welcome to my Page')
     })
 
     it('partial element text', async () => {
         await browser.url('/example.html')
 
-        const header = await $('h1*=Welcome')
+        let header = await $('h1*=Welcome')
+        await expect(header).toHaveText('Welcome to my Page')
+        header = await $('h1.*=WeLcoMe')
         await expect(header).toHaveText('Welcome to my Page')
 
-        const classNameAndText = await $('.someElem=WebdriverIO is the best')
+        let classNameAndText = await $('.someElem=WebdriverIO is the best')
+        await expect(classNameAndText).toHaveText('WebdriverIO is the best')
+        classNameAndText = await $('.someElem.=WeBdRivErIO iS tHe Best')
         await expect(classNameAndText).toHaveText('WebdriverIO is the best')
 
-        const idAndText = await $('#elem=WebdriverIO is the best')
+        let idAndText = await $('#elem=WebdriverIO is the best')
+        await expect(idAndText).toHaveText('WebdriverIO is the best')
+        idAndText = await $('#elem.=WEBdrIVerIO Is tHe bESt')
         await expect(idAndText).toHaveText('WebdriverIO is the best')
 
-        const classNameAndPartialText = await $('.someElem*=WebdriverIO')
+        let classNameAndPartialText = await $('.someElem*=WebdriverIO')
+        await expect(classNameAndPartialText).toHaveText('WebdriverIO is the best')
+        classNameAndPartialText = await $('.someElem.*=WeBDRivErIO')
         await expect(classNameAndPartialText).toHaveText('WebdriverIO is the best')
 
-        const idAndPartialText = await $('#elem*=WebdriverIO')
+        let idAndPartialText = await $('#elem*=WebdriverIO')
+        await expect(idAndPartialText).toHaveText('WebdriverIO is the best')
+        idAndPartialText = await $('#elem.*=WebdRivErIO')
         await expect(idAndPartialText).toHaveText('WebdriverIO is the best')
     })
 
@@ -138,7 +150,7 @@ describe('selectors', () => {
 
         const elem = await $('#elem') // or $(() => document.getElementById('elem'))
         await expect(
-             // (first sibling is #text with value ("↵"))
+            // (first sibling is #text with value ("↵"))
             elem.$(function () { return this.nextSibling.nextSibling })
         ).toHaveText('barfoo')
     })
