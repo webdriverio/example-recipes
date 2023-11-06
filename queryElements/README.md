@@ -23,3 +23,9 @@ Fetching multiple elements:
 ```sh
 npm run queryElements:multiple
 ```
+
+Fetch elements using custom selector strategies:
+
+```sh
+npm run queryElements:custom
+```

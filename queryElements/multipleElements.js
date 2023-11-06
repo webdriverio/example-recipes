@@ -1,4 +1,3 @@
-import { Key } from 'webdriverio'
 describe('waitForDisplayed Example', () => {
     it('should get text a menu link', async () => {
         await browser.url('/example.html')

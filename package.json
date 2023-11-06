@@ -32,6 +32,7 @@
     "queryElements": "run-s queryElements:*",
     "queryElements:single": "cross-env EXAMPLE_RECIPE=queryElements wdio run ./wdio.conf.js --spec ./queryElements/singleElements.js",
     "queryElements:multiple": "cross-env EXAMPLE_RECIPE=queryElements wdio run ./wdio.conf.js --spec ./queryElements/multipleElements.js",
+    "queryElements:custom": "cross-env EXAMPLE_RECIPE=queryElements wdio run ./wdio.conf.js --spec ./queryElements/customStrategy.js",
     "selectors": "cross-env EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js",
     "selectors:css": "cross-env EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'css selector'",
     "selectors:linkText": "cross-env EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'link text'",
@@ -68,11 +69,9 @@
     "@wdio/mocha-framework": "^8.21.0",
     "@wdio/spec-reporter": "^8.21.0",
     "@wdio/static-server-service": "^8.21.0",
-    "chromedriver": "*",
     "cross-env": "^7.0.3",
     "devtools": "^8.21.0",
     "npm-run-all": "^4.1.5",
-    "wdio-chromedriver-service": "^8.1.1",
     "webdriverio": "^8.21.0"
   }
 }
