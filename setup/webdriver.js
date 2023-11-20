@@ -1,7 +1,4 @@
 import assert from 'node:assert'
-import Chromedriver from 'chromedriver'
-Chromedriver.start(['--port=4444'])
-
 import WebDriver from 'webdriver'
 
 const client = await WebDriver.newSession({
@@ -31,5 +28,4 @@ console.log(title) // outputs "WebDriver - Google Search"
 
 await client.deleteSession()
 
-Chromedriver.stop()
 assert.equal(title, 'WebDriver - Google Search')
