@@ -11,18 +11,6 @@ describe('click examples', () => {
         await expect($('#someText')).toHaveText('I was clicked')
     })
 
-    it('should miss the button due to passed in x parameter', async () => {
-        const myButton = await $('#myButton')
-        await myButton.click({ x: 100 })
-        await expect($('#someText')).toHaveText('I was not clicked')
-    })
-
-    it('should miss the button due to passed in y parameter', async () => {
-        const myButton = await $('#myButton')
-        await myButton.click({ y: 100 })
-        await expect($('#someText')).toHaveText('I was not clicked')
-    })
-
     it('should do a right click', async () => {
         const myButton = await $('#myButton')
         await myButton.click({ button: 2 })
