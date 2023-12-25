@@ -65,7 +65,7 @@
     "@testing-library/svelte": "^4.0.5",
     "@wdio/browser-runner": "^8.26.2",
     "@wdio/cli": "^8.26.2",
-    "@wdio/local-runner": "^8.26.2",
+    "@wdio/local-runner": "^8.27.0",
     "@wdio/mocha-framework": "^8.26.2",
     "@wdio/spec-reporter": "^8.26.2",
     "@wdio/static-server-service": "^8.26.2",
