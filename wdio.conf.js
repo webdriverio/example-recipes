@@ -57,7 +57,13 @@ export const config = {
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
             args: process.env.CI ? ['headless', 'disable-gpu'] : []
-        }
+        },
+        /**
+         * only enable bidi in some cases
+         */
+        ...(process.env.EXAMPLE_RECIPE === 'emulate'
+            ? { webSocketUrl: true }
+            : {})
     }],
     //
     // ===================
