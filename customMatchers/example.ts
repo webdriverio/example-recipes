@@ -47,11 +47,11 @@ declare global {
 }
 
 describe('custom matchers', () => {
-    it('WebdriverIO.Browser', async () => {
+    it('use custom matcher on browser object', async () => {
         await expect(browser).toHaveLanguage('en-US')
     })
 
-    it('WebdriverIO.Element', async () => {
+    it('use custom matcher on element object', async () => {
         await browser.url('https://webdriver.io')
         await expect($('div[role="region"]')).toHaveAriaLabel('Skip to main content')
     })
