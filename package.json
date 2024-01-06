@@ -25,6 +25,7 @@
     "click": "cross-env EXAMPLE_RECIPE=click wdio run ./wdio.conf.js --spec ./click/example.js",
     "component-testing": "run-s component-testing:*",
     "component-testing:svelte": "wdio run ./wdio.comp.conf.js --spec ./component-testing/svelte-example.js",
+    "customMatchers": "cross-env TS_NODE_PROJECT=./customMatchers/tsconfig.json EXAMPLE_RECIPE=customMatchers wdio run ./wdio.conf.js --spec ./customMatchers/example.ts",
     "deleteCookies": "cross-env EXAMPLE_RECIPE=deleteCookies wdio run ./wdio.conf.js --spec ./deleteCookies/example.js",
     "emulate": "cross-env EXAMPLE_RECIPE=emulate wdio run ./wdio.conf.js --spec ./emulate/example.js",
     "getting-started": "node ./getting-started/run-in-script.js",
@@ -73,6 +74,8 @@
     "cross-env": "^7.0.3",
     "devtools": "^8.27.0",
     "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
     "webdriverio": "^8.27.0"
   }
 }
