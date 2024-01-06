@@ -12,16 +12,16 @@ npm install
 
 ## Examples
 
-### Custom `WebdriverIO.Browser` Matcher
-In this example, we start setting 3 cookies and attempt to delete one:
+### Custom Browser Matcher
+In this example, we add a custom matcher to assert the browser language setting.
 
 ```sh
-npm run customMatchers -- --mochaOpts.grep 'WebdriverIO.Browser'
+npm run customMatchers -- --mochaOpts.grep 'browser object'
 ```
 
-### Custom `WebdriverIO.Element` Matcher
-In this example, we then delete all (the remaining 2) cookies.
+### Custom Element Matcher
+In this example, we add a custom matcher to assert the aria-label of a given element.
 
 ```sh
-npm run customMatchers -- --mochaOpts.grep 'WebdriverIO.Element'
+npm run customMatchers -- --mochaOpts.grep 'element object'
 ```
