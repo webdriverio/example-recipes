@@ -27,6 +27,7 @@
     "component-testing:svelte": "wdio run ./wdio.comp.conf.js --spec ./component-testing/svelte-example.js",
     "customMatchers": "cross-env TS_NODE_PROJECT=./customMatchers/tsconfig.json EXAMPLE_RECIPE=customMatchers wdio run ./wdio.conf.js --spec ./customMatchers/example.ts",
     "deleteCookies": "cross-env EXAMPLE_RECIPE=deleteCookies wdio run ./wdio.conf.js --spec ./deleteCookies/example.js",
+    "testDownloadBehavior": "wdio run ./wdio.conf.js --spec ./testDownloadBehavior/example.js",
     "emulate": "cross-env EXAMPLE_RECIPE=emulate wdio run ./wdio.conf.js --spec ./emulate/example.js",
     "getting-started": "node ./getting-started/run-in-script.js",
     "keys": "cross-env EXAMPLE_RECIPE=keys wdio run ./wdio.conf.js --spec ./keys/keys.js",
