@@ -5,7 +5,7 @@ export const config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    
+
     //
     // ==================
     // Specify Test Files
@@ -62,7 +62,7 @@ export const config = {
          * only enable bidi in some cases
          */
         ...(process.env.EXAMPLE_RECIPE === 'emulate'
-            ? { webSocketUrl: true }
+            ? {webSocketUrl: true}
             : {})
     }],
     //
@@ -123,7 +123,7 @@ export const config = {
             }]
             : undefined
     ].filter(Boolean),
-    
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -293,10 +293,10 @@ export const config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
-    * @param {String} oldSessionId session ID of the old session
-    * @param {String} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {String} oldSessionId session ID of the old session
+     * @param {String} newSessionId session ID of the new session
+     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
 }
