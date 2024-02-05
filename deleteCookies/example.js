@@ -12,14 +12,14 @@ describe('deleteCookies', () => {
             {name: 'test2', value: '456'},
             {name: 'test', value: '123'}
         ])
-    
+
         let cookies = await browser.getCookies()
         expect(cookies).toMatchObject([
-            { name: 'test', value: '123' },
             { name: 'test2', value: '456' },
+            { name: 'test', value: '123' },
             { name: 'test3', value: '789' }
         ])
-    
+
         await browser.deleteCookies(['test3'])
         cookies = await browser.getCookies()
         expect(cookies).toMatchObject([
