@@ -13,6 +13,7 @@ const BrowserCapabilities = {
     [Browsers.CHROME]: {
         browserName: Browsers.CHROME,
         "goog:chromeOptions": {
+            args: ['headless', 'disable-gpu'],
             prefs: {
                 "download.default_directory": __dirname
             }
@@ -22,6 +23,7 @@ const BrowserCapabilities = {
         browserName: Browsers.FIREFOX,
         "moz:debuggerAddress": true,
         "moz:firefoxOptions": {
+            args: ['-headless'],
             prefs: {
                 "browser.download.dir": __dirname,
                 "browser.download.folderList": 2,
@@ -33,6 +35,7 @@ const BrowserCapabilities = {
     [Browsers.MS_EDGE]: {
         browserName: Browsers.MS_EDGE,
         "ms:edgeOptions": {
+            args: ['--headless'],
             prefs: {
                 "download.default_directory": __dirname
             }
