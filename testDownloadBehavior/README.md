@@ -1,6 +1,6 @@
 # WebdriverIO `Download Behavior` Examples
 
-This example directory contains test files that demonstrate WebdriverIO's download behavior.
+This example repository contains test file that demonstrates WebdriverIO's download behavior.
 
 ## Prerequisite
 
@@ -12,102 +12,87 @@ npm install
 
 ## For Google Chrome
 
-**NOTE**: Ensure that the directory specified in `example.js` matches the directory you've set in capabilities.
+**NOTE**: Ensure that the download directory specified in `helper.js` matches the directory you've set in capabilities.
 
-To test download behavior in **Google Chrome**, use these capabilties.
+For **Chrome**, use these capabilities,
 
 ```javascript
 {
     browserName: "chrome",
-    "goog:chromeOptions": {
+    "goog:chromeOptions":{
         prefs: {
-            "download.default_directory": "/path/to/downloads/directory",
-        },
-    },
-}
-```
-
-## For Microsoft Edge
-
-**NOTE**: Ensure that the directory specified in `example.js` matches the directory you've set in capabilities.
-
-To test download behavior in **Microsoft Edge**, use these capabilties.
-
-```javascript
-{
-    browserName: "msedge",
-    "ms:edgeOptions": {
-        prefs: {
-            "download.default_directory": "/path/to/downloads/directory",
-        },
-    },
-}
-```
-
-## For Mozilla Firefox
-
-**NOTE**: Ensure that the directory specified in `example.js` matches the directory you've set in capabilities.
-
-To test download behavior in **Mozilla Firefox**, use these capabilties.
-
-```javascript
-{
-    browserName: "firefox",
-    "moz:debuggerAddress": true,
-    "moz:firefoxOptions": {
-        prefs: {
-            "browser.download.dir": "/path/to/downloads/directory",
-            "browser.download.folderList": 2,
-            "browser.download.manager.showWhenStarting": false,
-            "browser.helperApps.neverAsk.saveToDisk": "*/*",
-        },
-    },
-}
-```
-
-## For Apple Safari
-
-I have tried overriding default **Safari** download directory using:
-
-```javascript
-{
-    browserName: "safari",
-    "safari.safariOptions":{
-        dataDir: "/path/to/downloads/directory"
+            "download.default_directory":"/path/to/downloads/directory"
+        }
     }
 }
 ```
 
-But it **didn't** work out.
+To test download behavior in **Chrome**,
 
-### Verify Safari Download Setup
+```sh
+npm run testDownload:chrome
+```
 
-Safari downloads can still be verified.
+## For Microsoft Edge
 
-- **Setup to Verify**
+**NOTE**: Ensure that the download directory specified in `helper.js` matches the directory you've set in capabilities.
 
-  Apply the following changes to `Apple Safari`:
-
-  - Open Safari > Preferences
-    - In `Advanced`, Check the `show feature for web developer` option.
-    - In `General`, Set default download directory.
-    - In `Websites > Downloads`, Allow all website to download (to remove popup that asks if you want to allow downloads from this website)
-
-**NOTE**: Ensure that the directory specified in `example.js` matches the directory you've set in **Safari** as default download directory.
-
-To test download behavior in **Apple Safari**, use these capabilties.
+For **Edge**, use these capabilities,
 
 ```javascript
 {
-    browserName: "safari",
+    browserName: "msedge",
+    "ms:edgeOptions":{
+        prefs: {
+            "download.default_directory":"/path/to/downloads/directory"
+        }
+    }
 }
 ```
 
+To test download behavior in **Edge**,
+
+```sh
+npm run testDownload:msedge
+```
+
+## For Mozilla Firefox
+
+**NOTE**: Ensure that the download directory specified in `helper.js` matches the directory you've set in capabilities.
+
+For **Firefox**, use these capabilities.
+
+```javascript
+{
+    browserName: "firefox",
+    "moz:debuggerAddress":true,
+    "moz:firefoxOptions":{
+        prefs: {
+            "browser.download.dir":"/path/to/downloads/directory",
+            "browser.download.folderList":2,
+            "browser.download.manager.showWhenStarting":false,
+            "browser.helperApps.neverAsk.saveToDisk":"*/*"
+        }
+    }
+}
+```
+
+To test download behavior in **Firefox**,
+
+```sh
+npm run testDownload:firefox
+```
+
+## For Apple Safari
+
+Unfortunately, **Safari** doesn't support defining download dirs through WebDriver capabilities.
+
 ## Test Download Behavior
 
-**IMPORTANT NOTE**: Ensure that the directory specified in `example.js` matches the directory you've set in capabilities.
+**IMPORTANT NOTE**: Ensure that the download directory specified in `helper.js` matches the directory you've set in
+capabilities.
 
-Test download behavior using:
+To test download behavior across all browsers, i.e. **Google Chrome**, **Mozilla Firefox**, and **Microsoft Edge**,
 
 ```sh
 npm run testDownloadBehavior

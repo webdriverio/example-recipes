@@ -18,6 +18,7 @@ jobs:
           - selectors
           - getting-started
           - setup
+          - testDownloadBehavior
           - component-testing
           - api/webdriver
     steps:
