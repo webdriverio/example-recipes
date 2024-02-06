@@ -46,5 +46,5 @@ const BrowserCapabilities = {
 
 export const config = {
     ...baseConfig,
-    capabilities: [BrowserCapabilities[process.env.EXAMPLE_BROWSER] ?? BrowserCapabilities[Browsers.CHROME]]
+    capabilities: [BrowserCapabilities[process.env.BROWSER] ?? BrowserCapabilities[Browsers.CHROME]]
 }
