@@ -76,7 +76,7 @@
     "@wdio/spec-reporter": "^8.36.1",
     "@wdio/static-server-service": "^8.36.1",
     "cross-env": "^7.0.3",
-    "devtools": "^8.36.0",
+    "devtools": "^8.36.1",
     "npm-run-all2": "^6.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
