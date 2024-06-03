@@ -66,7 +66,7 @@
     "waitUntil": "cross-env EXAMPLE_RECIPE=waitUntil wdio run ./wdio.conf.js --spec ./waitUntil/waitUntilExample.js"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.1.0",
+    "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/svelte": "^5.1.0",
     "@wdio/browser-runner": "^8.38.0",
