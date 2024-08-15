@@ -69,9 +69,9 @@
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/svelte": "^5.2.1",
-    "@wdio/browser-runner": "9.0.0",
-    "@wdio/cli": "9.0.0",
-    "@wdio/local-runner": "9.0.0",
+    "@wdio/browser-runner": "9.0.1",
+    "@wdio/cli": "9.0.1",
+    "@wdio/local-runner": "9.0.1",
     "@wdio/mocha-framework": "9.0.0",
     "@wdio/spec-reporter": "9.0.0",
     "@wdio/static-server-service": "9.0.0",
@@ -80,6 +80,6 @@
     "npm-run-all2": "^6.2.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
-    "webdriverio": "9.0.0"
+    "webdriverio": "9.0.1"
   }
 }
