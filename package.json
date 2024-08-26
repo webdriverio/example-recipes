@@ -80,6 +80,6 @@
     "npm-run-all2": "^6.2.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
-    "webdriverio": "9.0.1"
+    "webdriverio": "9.0.7"
   }
 }
