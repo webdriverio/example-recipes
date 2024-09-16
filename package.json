@@ -77,7 +77,7 @@
     "@wdio/static-server-service": "9.0.0",
     "cross-env": "^7.0.3",
     "devtools": "^8.40.2",
-    "npm-run-all2": "^6.2.2",
+    "npm-run-all2": "^6.2.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "webdriverio": "9.0.1"
