@@ -74,7 +74,7 @@
     "@wdio/local-runner": "9.0.1",
     "@wdio/mocha-framework": "9.0.0",
     "@wdio/spec-reporter": "9.0.0",
-    "@wdio/static-server-service": "9.0.0",
+    "@wdio/static-server-service": "9.1.2",
     "cross-env": "^7.0.3",
     "devtools": "^8.40.2",
     "npm-run-all2": "^6.2.2",
