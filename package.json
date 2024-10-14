@@ -79,7 +79,7 @@
     "devtools": "^8.40.2",
     "npm-run-all2": "^6.2.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.2",
+    "typescript": "^5.6.3",
     "webdriverio": "9.1.2"
   }
 }
