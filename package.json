@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
-    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/jest-dom": "^6.6.2",
     "@testing-library/svelte": "^5.2.1",
     "@wdio/browser-runner": "9.1.2",
     "@wdio/cli": "9.1.2",
