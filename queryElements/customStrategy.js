@@ -6,7 +6,7 @@ describe('Custom Strategy Example', () => {
              * and `root` if called on an element object
              */
             const scope = root ? root : document
-            return scope.querySelectorAll(selector)
+            return scope.querySelector(selector)
         })
     })
 
