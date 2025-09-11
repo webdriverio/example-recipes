@@ -56,7 +56,7 @@ export const config = {
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
-            args: process.env.CI ? ['headless', 'disable-gpu'] : []
+            args: ['headless', 'disable-gpu']
         },
         /**
          * only enable bidi in some cases
