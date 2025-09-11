@@ -21,6 +21,7 @@
     "url": "https://github.com/webdriverio/webdriverio-example-recipes/issues"
   },
   "scripts": {
+    "test": "run-s api/webdriver click component-testing customMatchers deleteCookies testDownloadBehavior emulate keys overwriteCommand queryElements selectors waitForDisplayed waitUntil",
     "api/webdriver": "cross-env EXAMPLE_RECIPE=api wdio run ./wdio.conf.js --spec ./api/webdriver/*.js",
     "click": "cross-env EXAMPLE_RECIPE=click wdio run ./wdio.conf.js --spec ./click/example.js",
     "component-testing": "run-s component-testing:*",
