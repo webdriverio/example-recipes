@@ -56,6 +56,7 @@
     "selectors:ariaRole": "cross-env EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'by role attribute'",
     "selectors:js": "cross-env EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'js function'",
     "selectors:deep": "cross-env EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/example.js --mochaOpts.grep 'deep selector'",
+    "selectors:puppeteer:aria": "cross-env EXAMPLE_RECIPE=selectors wdio run ./wdio.conf.js --spec ./selectors/puppeteer_aria_example.js",
     "setup": "run-s setup:*",
     "setup:webdriver": "node ./setup/webdriver.js",
     "setup:devtools": "node ./setup/devtools.js",
