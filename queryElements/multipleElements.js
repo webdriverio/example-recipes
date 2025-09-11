@@ -17,8 +17,8 @@ describe('waitForDisplayed Example', () => {
         const text = await $$(function() { // Arrow function is not allowed here.
             // this is Window https://developer.mozilla.org/en-US/docs/Web/API/Window
             // TypeScript users may do something like this
-            // return (this as Window).document.querySelectorAll('#menu')
-            return this.document.querySelectorAll('#menu') // Element[]
+            // return (this as Window).document.querySelector('#menu')
+            return this.document.querySelector('#menu') // Element[]
         })[0]
         console.log(await text.$$('li')[2].$('a').getText()) // outputs: "API"
 
