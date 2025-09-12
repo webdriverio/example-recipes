@@ -75,7 +75,7 @@ describe('WebDriver API', () => {
         expect(await browser.execute(() => window.foobar )).toBe('123')
         await browser.refresh()
         await browser.pause(200) // wait for page refresh to happen
-        expect(await browser.execute(() => window.foobar )).toBe(null)
+        expect(await browser.execute(() => window.foobar )).toBe(undefined)
     })
 
     it('getTitle', async () => {
