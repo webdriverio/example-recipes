@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "author": "Christian Bromann <christian@saucelabs.com>",
   "description": "A set of common automation recipes using WebdriverIO",
-  "homepage": "https://github.com/webdriverio/webdriverio-example-recipes#readme",
+  "homepage": "https://github.com/webdriverio/example-recipes#readme",
   "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webdriverio/webdriverio-example-recipes.git"
+    "url": "git+https://github.com/webdriverio/example-recipes.git"
   },
   "keywords": [
     "webdriverio",
@@ -18,7 +18,7 @@
     "automation"
   ],
   "bugs": {
-    "url": "https://github.com/webdriverio/webdriverio-example-recipes/issues"
+    "url": "https://github.com/webdriverio/example-recipes/issues"
   },
   "scripts": {
     "api/webdriver": "cross-env EXAMPLE_RECIPE=api wdio run ./wdio.conf.js --spec ./api/webdriver/*.js",
