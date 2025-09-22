@@ -80,8 +80,8 @@ describe('selectors', () => {
         const paragraph = await $('//body/p[2]')
         await expect(paragraph).toHaveText('barfoo')
 
-        // const parent = await paragraph.$('..')
-        // expect(await parent.getTagName()).toBe('body')
+        const parent = await paragraph.parentElement();
+        expect(await parent.getTagName()).toBe('body')
     })
 
     describe('aria', () => {
