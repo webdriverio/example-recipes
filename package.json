@@ -30,7 +30,7 @@
     "testDownloadBehavior": "run-s testDownload:*",
     "testDownload:chrome": "cross-env BROWSER=chrome wdio run ./testDownloadBehavior/wdio.conf.js --spec ./testDownloadBehavior/example.js",
     "testDownload:firefox": "cross-env BROWSER=firefox wdio run ./testDownloadBehavior/wdio.conf.js --spec ./testDownloadBehavior/example.js",
-    "_testDownload:edge-disabled": "cross-env BROWSER=edge wdio run ./testDownloadBehavior/wdio.conf.js --spec ./testDownloadBehavior/example.js",
+    "testDownload:edge": "cross-env BROWSER=edge wdio run ./testDownloadBehavior/wdio.conf.js --spec ./testDownloadBehavior/example.js",
     "emulate": "cross-env EXAMPLE_RECIPE=emulate wdio run ./wdio.conf.js --spec ./emulate/example.js",
     "getting-started": "node ./getting-started/run-in-script.js",
     "keys": "cross-env EXAMPLE_RECIPE=keys wdio run ./wdio.conf.js --spec ./keys/keys.js",
