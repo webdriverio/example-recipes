@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url)
 // matches the directory you've set in capabilities.
 const downloadDirectory = path.dirname(__filename)
 
-const expectedFileName = "1KiB.bin"
+const expectedFileName = "package.json"
 const filePath = `${downloadDirectory}/${expectedFileName}`
 
 const deleteFileIfExists = () => {

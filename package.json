@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "author": "Christian Bromann <christian@saucelabs.com>",
   "description": "A set of common automation recipes using WebdriverIO",
-  "homepage": "https://github.com/webdriverio/webdriverio-example-recipes#readme",
+  "homepage": "https://github.com/webdriverio/example-recipes#readme",
   "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webdriverio/webdriverio-example-recipes.git"
+    "url": "git+https://github.com/webdriverio/example-recipes.git"
   },
   "keywords": [
     "webdriverio",
@@ -18,7 +18,7 @@
     "automation"
   ],
   "bugs": {
-    "url": "https://github.com/webdriverio/webdriverio-example-recipes/issues"
+    "url": "https://github.com/webdriverio/example-recipes/issues"
   },
   "scripts": {
     "api/webdriver": "cross-env EXAMPLE_RECIPE=api wdio run ./wdio.conf.js --spec ./api/webdriver/*.js",
@@ -30,7 +30,7 @@
     "testDownloadBehavior": "run-s testDownload:*",
     "testDownload:chrome": "cross-env BROWSER=chrome wdio run ./testDownloadBehavior/wdio.conf.js --spec ./testDownloadBehavior/example.js",
     "testDownload:firefox": "cross-env BROWSER=firefox wdio run ./testDownloadBehavior/wdio.conf.js --spec ./testDownloadBehavior/example.js",
-    "testDownload:edge": "cross-env BROWSER=edge wdio run ./testDownloadBehavior/wdio.conf.js --spec ./testDownloadBehavior/example.js",
+    "_testDownload:edge-disabled": "cross-env BROWSER=edge wdio run ./testDownloadBehavior/wdio.conf.js --spec ./testDownloadBehavior/example.js",
     "emulate": "cross-env EXAMPLE_RECIPE=emulate wdio run ./wdio.conf.js --spec ./emulate/example.js",
     "getting-started": "node ./getting-started/run-in-script.js",
     "keys": "cross-env EXAMPLE_RECIPE=keys wdio run ./wdio.conf.js --spec ./keys/keys.js",

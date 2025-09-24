@@ -6,16 +6,10 @@ describe("File Download Test", () => {
         deleteDownloadedFileIfExists();
     });
 
-    it("go to fastest fish website", async () => {
-        await browser.url("https://fastest.fish/test-files");
-    });
-
     it("should download file and validate", async () => {
-        const byteCount = await $("#byteCount");
-        await byteCount.scrollIntoView();
-        await byteCount.setValue("1");
-
-        const downloadButton = await $("div.form-row button");
+        await browser.url("https://github.com/webdriverio/webdriverio/blob/main/package.json");
+        const downloadButton = await $("[data-testid=\"download-raw-button\"]");
+        await downloadButton.scrollIntoView();
         await downloadButton.click();
 
         await driver.waitUntil(async () => {
@@ -24,6 +18,9 @@ describe("File Download Test", () => {
 
         const fileExists = fs.existsSync(filePath);
         await expect(fileExists).toBeTruthy();
+
+        const fileContents = fs.readFileSync(filePath, { encoding: "utf-8" });
+        await expect(fileContents).toContain("webdriverio-monorepo");
     });
 
     after(() => {
