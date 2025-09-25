@@ -4,6 +4,8 @@ import { config as baseConfig } from './wdio.conf.js'
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 
+const { FIREFOX_BINARY_PATH } = process.env
+
 const chromeOptions = {
     capabilities: {
         browserName: 'chrome',
@@ -32,26 +34,9 @@ const firefoxOptions = {
     }
 }
 
-const firefoxNightlyOptions = {
-    capabilities: {
-        browserName: 'firefox',
-        "moz:debuggerAddress": true,
-        "moz:firefoxOptions": {
-            args: process.env.CI ? ['-headless'] : [],
-            prefs: {
-                "browser.download.dir": __dirname,
-                "browser.download.folderList": 2,
-                "browser.download.manager.showWhenStarting": false,
-                "browser.helperApps.neverAsk.saveToDisk": "*/*"
-            }
-        }
-    }
-}
-
-if (!process.env.CI) {
-  // TODO: this could be a env var also?
-  const firefoxNightlyBinaryPath = '/Applications/Firefox Nightly.app/Contents/MacOS/firefox';
-  firefoxNightlyOptions.capabilities['moz:firefoxOptions'].binary = firefoxNightlyBinaryPath;
+// Set custom Firefox binary path if provided, e.g., for using Nightly or a specific version
+if (FIREFOX_BINARY_PATH) {
+  firefoxOptions.capabilities['moz:firefoxOptions'].binary = FIREFOX_BINARY_PATH;
 }
 
 const edgeOptions = {
@@ -75,7 +60,6 @@ const safariOptions = {
 const browserCapabilities = {
     chrome: chromeOptions.capabilities,
     firefox: firefoxOptions.capabilities,
-    firefoxNightly: firefoxNightlyOptions.capabilities,
     edge: edgeOptions.capabilities,
     safari: safariOptions.capabilities
 }
