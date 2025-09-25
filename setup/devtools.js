@@ -29,7 +29,7 @@ const loginBtn = await client.findElement('css selector', 'button[type="submit"]
 await client.elementClick(loginBtn['element-6066-11e4-a52e-4f735466cecf'])
 
 // pause
-await new Promise((resolve) => setTimeout(resolve, 1000))
+await new Promise((resolve) => setTimeout(resolve, 300))
 
 const url = await client.getUrl()
 console.log(url)
