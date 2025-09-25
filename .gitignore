@@ -105,4 +105,4 @@ dist
 
 *.png
 
-testDownloadBehavior/package.json
+downloads/package.json

@@ -1,9 +1,15 @@
-import path from 'node:path'
-import url from 'node:url'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import fs from 'fs'
 import { config as baseConfig } from './wdio.conf.js'
 
-const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
+// Create downloads directory if it doesn't exist
+export const downloadsDir = path.join(path.dirname(fileURLToPath(import.meta.url)), 'downloads')
+if (!fs.existsSync(downloadsDir)){
+    fs.mkdirSync(downloadsDir);
+}
 
+// Get custom Firefox binary path from environment variable if set
 const { FIREFOX_BINARY_PATH } = process.env
 
 const chromeOptions = {
@@ -12,7 +18,7 @@ const chromeOptions = {
         "goog:chromeOptions": {
           args: process.env.CI ? ['headless', 'disable-gpu'] : ['disable-gpu'],
             prefs: {
-                "download.default_directory": __dirname
+                "download.default_directory": downloadsDir
             }
         }
     }
@@ -25,7 +31,7 @@ const firefoxOptions = {
         "moz:firefoxOptions": {
             args: process.env.CI ? ['-headless'] : [],
             prefs: {
-                "browser.download.dir": __dirname,
+                "browser.download.dir": downloadsDir,
                 "browser.download.folderList": 2,
                 "browser.download.manager.showWhenStarting": false,
                 "browser.helperApps.neverAsk.saveToDisk": "*/*"
@@ -45,7 +51,7 @@ const edgeOptions = {
         "ms:edgeOptions": {
             args: process.env.CI ? ['--headless'] : [],
             prefs: {
-                "download.default_directory": __dirname
+                "download.default_directory": downloadsDir
             }
         }
     }
