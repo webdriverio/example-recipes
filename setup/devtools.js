@@ -10,26 +10,36 @@ const client = await DevTools.newSession({
     }
 })
 
-await client.navigateTo('https://www.google.com/ncr')
+await client.navigateTo('https://the-internet.herokuapp.com/')
 
-const approveCookieBtns = await client.findElements('css selector', 'button div[role="none"]')
-if (approveCookieBtns.length) {
-    await client.elementClick(approveCookieBtns[approveCookieBtns.length - 1]['element-6066-11e4-a52e-4f735466cecf'])
+const addRemoveElementsBtn = await client.findElements('css selector', 'a[href="/add_remove_elements/"]')
+if (addRemoveElementsBtn.length) {
+    await client.elementClick(addRemoveElementsBtn[addRemoveElementsBtn.length - 1]['element-6066-11e4-a52e-4f735466cecf'])
 }
 
-const searchInput = await client.findElement('css selector', 'textarea')
-await client.elementSendKeys(searchInput['element-6066-11e4-a52e-4f735466cecf'], 'DevTools')
-const submitBtns = await client.findElements('css selector', 'input[value="Google Search"]')
-await client.elementClick(submitBtns[1]['element-6066-11e4-a52e-4f735466cecf'])
+const addElementBtn = await client.findElement('css selector', '.example button')
+await client.elementClick(addElementBtn['element-6066-11e4-a52e-4f735466cecf'])
+
+await client.navigateTo('https://the-internet.herokuapp.com/login')
+const usernameInput = await client.findElement('css selector', '#username')
+await client.elementSendKeys(usernameInput['element-6066-11e4-a52e-4f735466cecf'], 'tomsmith')
+const passwordInput = await client.findElement('css selector', '#password')
+await client.elementSendKeys(passwordInput['element-6066-11e4-a52e-4f735466cecf'], 'SuperSecretPassword!')
+const loginBtn = await client.findElement('css selector', 'button[type="submit"]')
+await client.elementClick(loginBtn['element-6066-11e4-a52e-4f735466cecf'])
 
 // pause
 await new Promise((resolve) => setTimeout(resolve, 1000))
 
-const title = await client.getTitle()
-console.log(title) // outputs "DevTools - Google Search"
 const url = await client.getUrl()
-console.log(url) // sometimes this goes to /sorry/ page as Google thinks you are a bot
+console.log(url)
+assert.ok(url.includes('secure'))
+
+const youAreLoggedInBanner = await client.findElement('css selector', '#flash')
+const bannerText = await client.getElementText(youAreLoggedInBanner['element-6066-11e4-a52e-4f735466cecf'])
+console.log(bannerText) // outputs "You logged into a secure area!"
+
+assert.ok(bannerText.includes('You logged into a secure area!'))
 
 await client.deleteSession()
 
-assert.ok(title.includes('Google Search') || url.includes('sorry'))
