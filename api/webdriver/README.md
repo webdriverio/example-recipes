@@ -98,10 +98,10 @@ npm run api/webdriver -- --mochaOpts.grep "createWindow"
 npm run api/webdriver -- --mochaOpts.grep "getWindowHandles"
 ```
 
-### `switchToFrame`
+### `switchFrame`
 
 ```sh
-npm run api/webdriver -- --mochaOpts.grep "switchToFrame"
+npm run api/webdriver -- --mochaOpts.grep "switchFrame"
 ```
 
 ### `switchToParentFrame`

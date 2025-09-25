@@ -151,7 +151,7 @@ describe('WebDriver API', () => {
         console.log(printedPage) // returns "aW1wb3J0IHsgYnJvd3NlciwgZXhw...."
     })
 
-    it('switchToFrame', async () => {
+    it('switchFrame', async () => {
         await browser.navigateTo('https://the-internet.herokuapp.com/iframe')
         const getDocumentText = () => browser.executeScript(
             'return document.documentElement.outerText',
@@ -161,7 +161,7 @@ describe('WebDriver API', () => {
         expect(await getDocumentText())
             .toContain('An iFrame containing the TinyMCE WYSIWYG Editor')
         const iframe = await browser.findElement('css selector', 'iframe')
-        await browser.switchToFrame(iframe)
+        await browser.switchFrame(iframe)
 
         await browser.pause(1000)
         expect(await getDocumentText())
@@ -178,7 +178,7 @@ describe('WebDriver API', () => {
         expect(await getDocumentText())
             .toContain('An iFrame containing the TinyMCE WYSIWYG Editor')
         const iframe = await browser.findElement('css selector', 'iframe')
-        await browser.switchToFrame(iframe)
+        await browser.switchFrame(iframe)
 
         await browser.pause(1000)
         expect(await getDocumentText())
