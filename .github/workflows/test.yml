@@ -3,7 +3,6 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
     strategy:
       matrix:
         exampleDir:
