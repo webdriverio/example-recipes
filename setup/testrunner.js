@@ -1,7 +1,7 @@
 import { browser, $ } from '@wdio/globals'
 
-describe('DuckDuckGo search', () => {
-    it('Searches for WebdriverIO', async () => {
+describe('the-internet login', () => {
+it('Logs in and assert banner text', async () => {
         await browser.url('https://the-internet.herokuapp.com/login')
 
         await browser.$('aria/Username').setValue('tomsmith')
