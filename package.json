@@ -23,6 +23,9 @@
   "scripts": {
     "api/webdriver": "cross-env EXAMPLE_RECIPE=api wdio run ./wdio.conf.js --spec ./api/webdriver/*.js",
     "click": "cross-env EXAMPLE_RECIPE=click wdio run ./wdio.conf.js --spec ./click/example.js",
+    "clipboard": "run-s clipboard:*",
+    "clipboard:chrome": "cross-env BROWSER=chrome EXAMPLE_RECIPE=clipboard wdio run ./wdio.browserChoice.conf.js --spec ./clipboard/chrome-example.js",
+    "clipboard:firefox": "cross-env BROWSER=firefox EXAMPLE_RECIPE=clipboard wdio run ./wdio.browserChoice.conf.js --spec ./clipboard/firefox-example.js",
     "component-testing": "run-s component-testing:*",
     "component-testing:svelte": "wdio run ./wdio.comp.conf.js --spec ./component-testing/svelte-example.js",
     "customMatchers": "cross-env TS_NODE_PROJECT=./customMatchers/tsconfig.json EXAMPLE_RECIPE=customMatchers wdio run ./wdio.conf.js --spec ./customMatchers/example.ts",

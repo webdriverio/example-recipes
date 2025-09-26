@@ -31,6 +31,7 @@ const firefoxOptions = {
         "moz:firefoxOptions": {
             args: process.env.CI ? ['-headless'] : [],
             prefs: {
+                "dom.events.asyncClipboard.readText": true, // Allow clipboard read
                 "browser.download.dir": downloadsDir,
                 "browser.download.folderList": 2,
                 "browser.download.manager.showWhenStarting": false,
