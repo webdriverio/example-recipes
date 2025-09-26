@@ -12,10 +12,8 @@
       const textToCopy = "Hello from WebdriverIO clipboard test!";
       try {
         await navigator.clipboard.writeText(textToCopy);
-        alert("Copied to clipboard: " + textToCopy);
       } catch (err) {
         console.error("Failed to copy:", err);
-        alert("Clipboard copy failed. Check browser permissions.");
       }
     });
   </script>

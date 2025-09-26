@@ -15,8 +15,9 @@ const { FIREFOX_BINARY_PATH } = process.env
 const chromeOptions = {
     capabilities: {
         browserName: 'chrome',
+        acceptInsecureCerts: true,
         "goog:chromeOptions": {
-          args: process.env.CI ? ['headless', 'disable-gpu'] : ['disable-gpu'],
+            args: process.env.CI ? ['headless', 'disable-gpu'] : [],
             prefs: {
                 "download.default_directory": downloadsDir
             }
