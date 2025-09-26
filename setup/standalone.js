@@ -10,13 +10,21 @@ const browser = await remote({
     }
 })
 
-await browser.url('https://duckduckgo.com')
+await browser.url('https://the-internet.herokuapp.com/login')
 
-await browser.$('aria/Search with DuckDuckGo').setValue('WebdriverIO')
-await browser.$('aria/Search').click()
+await browser.$('aria/Username').setValue('tomsmith')
+await browser.$('aria/Password').setValue('SuperSecretPassword!')
+await browser.$('button[type="submit"]').click()
 
-const title = await browser.getTitle()
-console.log(title) // outputs: "WebdriverIO at DuckDuckGo"
+await browser.pause(300)
+
+const url = await browser.getUrl()
+console.log(url) // outputs: "https://the-internet.herokuapp.com/secure"
+assert.ok(url.includes('secure'))
+
+const bannerText = await browser.$('#flash').getText()
+console.log(bannerText) // outputs "You logged into a secure area!"
+
+assert.ok(bannerText.includes('You logged into a secure area!'))
 
 await browser.deleteSession()
-assert.equal(title, 'WebdriverIO at DuckDuckGo')

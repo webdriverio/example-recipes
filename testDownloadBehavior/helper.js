@@ -1,15 +1,8 @@
 import fs from "fs"
-import path from "path"
-import {fileURLToPath} from "url"
-
-const __filename = fileURLToPath(import.meta.url)
-
-// Ensure that the download directory specified here
-// matches the directory you've set in capabilities.
-const downloadDirectory = path.dirname(__filename)
+import { downloadsDir } from "../wdio.browserChoice.conf"
 
 const expectedFileName = "package.json"
-const filePath = `${downloadDirectory}/${expectedFileName}`
+const filePath = `${downloadsDir}/${expectedFileName}`
 
 const deleteFileIfExists = () => {
     try {
