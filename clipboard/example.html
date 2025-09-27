@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clipboard Test</title>
+</head>
+<body>
+  <button id="copyBtn">Copy Text</button>
+
+  <script>
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      const textToCopy = "Hello from WebdriverIO clipboard test!";
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+      } catch (err) {
+        console.error("Failed to copy:", err);
+      }
+    });
+  </script>
+</body>
+</html>

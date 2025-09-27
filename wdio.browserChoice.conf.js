@@ -15,8 +15,9 @@ const { FIREFOX_BINARY_PATH } = process.env
 const chromeOptions = {
     capabilities: {
         browserName: 'chrome',
+        acceptInsecureCerts: true,
         "goog:chromeOptions": {
-          args: process.env.CI ? ['headless', 'disable-gpu'] : ['disable-gpu'],
+            args: process.env.CI ? ['headless', 'disable-gpu'] : [],
             prefs: {
                 "download.default_directory": downloadsDir
             }
@@ -31,6 +32,7 @@ const firefoxOptions = {
         "moz:firefoxOptions": {
             args: process.env.CI ? ['-headless'] : [],
             prefs: {
+                "dom.events.asyncClipboard.readText": true, // Allow clipboard read
                 "browser.download.dir": downloadsDir,
                 "browser.download.folderList": 2,
                 "browser.download.manager.showWhenStarting": false,
