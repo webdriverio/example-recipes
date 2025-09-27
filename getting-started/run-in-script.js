@@ -1,7 +1,8 @@
 import fs from 'node:fs'
 import { remote } from 'webdriverio'
+import { defineConfig } from '@wdio/config'
 
-const browser = await remote({
+const config = defineConfig({
     capabilities: {
         browserName: 'chrome',
         'goog:chromeOptions': {
@@ -9,6 +10,7 @@ const browser = await remote({
         }
     }
 })
+const browser = await remote(config)
 
 await browser.url('https://webdriver.io')
 const apiLink = await browser.$('=API')
