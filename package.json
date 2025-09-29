@@ -84,7 +84,7 @@
     "cross-env": "^10.0.0",
     "devtools": "^8.42.0",
     "npm-run-all2": "^8.0.4",
-    "webdriverio": "9.19.2"
+    "webdriverio": "9.20.0"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "*"
