@@ -81,7 +81,7 @@
     "@wdio/mocha-framework": "9.20.1",
     "@wdio/spec-reporter": "9.20.0",
     "@wdio/static-server-service": "9.20.0",
-    "cross-env": "^10.0.0",
+    "cross-env": "^10.1.0",
     "devtools": "^8.42.0",
     "npm-run-all2": "^8.0.4",
     "webdriverio": "9.20.1"
