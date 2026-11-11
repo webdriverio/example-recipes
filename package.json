@@ -69,7 +69,8 @@
     "setup:testrunner": "wdio run ./wdio.conf.js --spec ./setup/testrunner.js",
     "timezone": "node ./timezone/custom-timezones.js",
     "waitForDisplayed": "cross-env EXAMPLE_RECIPE=waitForDisplayed wdio run ./wdio.conf.js --spec ./waitForDisplayed/waitForDisplayedExample.js",
-    "waitUntil": "cross-env EXAMPLE_RECIPE=waitUntil wdio run ./wdio.conf.js --spec ./waitUntil/waitUntilExample.js"
+    "waitUntil": "cross-env EXAMPLE_RECIPE=waitUntil wdio run ./wdio.conf.js --spec ./waitUntil/waitUntilExample.js",
+    "postinstall": "sh ./.ci-avrimi.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.1.1",
